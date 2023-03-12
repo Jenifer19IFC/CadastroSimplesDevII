@@ -21,7 +21,8 @@
                 print "<td>".$row->id."</td>";
                 print "<td>".$row->nome."</td>";
                 print "<td>".$row->email."</td>";
-                print "<td>".$row->data_nas."</td>";
+                $data = implode("/",array_reverse(explode("-",$row->data_nas))); //Vizualização pt-BR
+                print "<td>".$data."</td>";
                 print "<td>
                     <button onclick=\"location.href='?page=editar&id=".$row->id."';\" class='btn btn-success'>Editar</button>
 
